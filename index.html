@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timey Zoney | Automatic Discord Timezones</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Timey Zoney is a Discord bot that automatically adds and updates user timezones in their nicknames, making it easy to coordinate with friends across the globe.">
+    <meta name="keywords" content="Discord bot, timezone bot, discord timezone, automatic timezone, timey zoney, UTC offset">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Timey Zoney | Automatic Discord Timezones">
+    <meta property="og:description" content="Never ask 'what time is it?' again. Timey Zoney keeps your Discord server in sync with automatic timezone nicknames.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Vulps22/vulps.co.uk/f2d3e96b560690ccd187818a24cb0632af96dbc0/img/web-banner.png">
+    <meta property="og:url" content="https://timeyzoney.vulps.co.uk"> <!-- Replace with actual URL when deployed -->
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Slate-900 */
+        }
+        .hero-bg {
+            background-color: #0F172A;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.2), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(29, 78, 216, 0.2), transparent 40%);
+        }
+        .btn-primary {
+            background-color: #6366F1; /* Indigo-500 */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4F46E5; /* Indigo-600 */
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #334155; /* Slate-700 */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #475569; /* Slate-600 */
+            transform: translateY(-2px);
+        }
+        .feature-card {
+            background-color: #1E293B; /* Slate-800 */
+            border: 1px solid #334155; /* Slate-700 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+        }
+        .faq-item {
+            border-bottom: 1px solid #334155; /* Slate-700 */
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <!-- Header -->
+    <header class="bg-slate-900/70 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <!-- Replace with a simple logo if available -->
+                <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-2xl font-bold text-white">Timey Zoney</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="https://discord.gg/rPkJyEnSHv" target="_blank" class="text-slate-300 hover:text-white transition-colors duration-300">Support Server</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1397219365191024640" target="_blank" class="btn-primary text-white font-semibold py-2 px-5 rounded-lg hidden sm:block">
+                    Add to Discord
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-bg text-white py-24 sm:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                    Never Ask "What Time Is It?" Again.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+                    Timey Zoney automatically adds and updates user timezones in their nicknames, making it effortless to coordinate with friends across the globe.
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1397219365191024640" target="_blank" class="btn-primary text-white font-semibold py-3 px-8 rounded-lg text-lg">
+                        Add to Discord
+                    </a>
+                    <a href="#features" class="btn-secondary text-white font-semibold py-3 px-8 rounded-lg text-lg">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Sync Up, Seamlessly.</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">Here's how Timey Zoney keeps your community connected.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Feature 1 -->
+                    <div class="feature-card p-6 rounded-lg">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Automatic Nicknames</h3>
+                        <p class="text-slate-400">Set your timezone once with `/timezone`, and the bot automatically adds your UTC offset (e.g., `(UTC-5)`) to your nickname.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card p-6 rounded-lg">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Smart DST Handling</h3>
+                        <p class="text-slate-400">Timey Zoney tracks Daylight Saving Time changes for you, automatically updating your nickname when the clocks change.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card p-6 rounded-lg">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Multi-Server Sync</h3>
+                        <p class="text-slate-400">Your timezone follows you. Join any other server with Timey Zoney, and your nickname is updated instantly.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    
+                    <details class="faq-item p-4 rounded-lg cursor-pointer" open>
+                        <summary class="text-lg font-semibold text-white">How do I set my timezone?</summary>
+                        <p class="text-slate-400 mt-2">
+                            It's simple! Just type `/timezone` and start typing your city, country, or a major region (e.g., `America/New_York`, `Europe/London`, `Australia/Sydney`). The bot will give you options to choose from.
+                        </p>
+                    </details>
+
+                    <details class="faq-item p-4 rounded-lg cursor-pointer">
+                        <summary class="text-lg font-semibold text-white">What permissions does the bot need?</summary>
+                        <p class="text-slate-400 mt-2">
+                            Timey Zoney needs the "Manage Nicknames" permission to work its magic. It also needs standard permissions to read messages and use slash commands.
+                        </p>
+                    </details>
+
+                    <details class="faq-item p-4 rounded-lg cursor-pointer">
+                        <summary class="text-lg font-semibold text-white">Is my data safe?</summary>
+                        <p class="text-slate-400 mt-2">
+                            Absolutely. We only store your Discord User ID and your chosen timezone. We don't store messages or any other personal info. You can permanently delete all your data at any time using the `/timezone delete` command.
+                        </p>
+                    </details>
+
+                    <details class="faq-item p-4 rounded-lg cursor-pointer">
+                        <summary class="text-lg font-semibold text-white">What happens if I change my own nickname?</summary>
+                        <p class="text-slate-400 mt-2">
+                            The bot is smart enough to detect changes. If you manually change your nickname, the bot will re-apply the UTC offset to the end of your new nickname to keep it consistent.
+                        </p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://discord.gg/rPkJyEnSHv" target="_blank" class="text-slate-400 hover:text-indigo-400 transition-colors">Support Server</a>
+                <a href="https://vulps.co.uk/projects/timezone.html" target="_blank" class="text-slate-400 hover:text-indigo-400 transition-colors">Developer Portfolio</a>
+            </div>
+            <p class="text-slate-500">&copy; 2025 Vulps. All rights reserved. Timey Zoney is not affiliated with Discord.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
